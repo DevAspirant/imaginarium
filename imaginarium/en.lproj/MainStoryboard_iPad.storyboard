@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Imaginarium View Controller-->
+        <scene sceneID="4">
+            <objects>
+                <viewController id="2" customClass="imaginariumViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="226" minimumZoomScale="0.20000000000000001" maximumZoomScale="5" translatesAutoresizingMaskIntoConstraints="NO" id="XX7-W6-i00">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="TopLeft" image="603969_608981115785306_1235947746_n.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Kly-FC-Xqa">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="768" id="La0-YE-UZd"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Kly-FC-Xqa" firstAttribute="top" secondItem="XX7-W6-i00" secondAttribute="top" constant="20" symbolic="YES" type="default" id="WF5-dH-hEi"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kly-FC-Xqa" secondAttribute="trailing" constant="11" id="gPJ-Es-rEL"/>
+                                    <constraint firstAttribute="bottom" secondItem="Kly-FC-Xqa" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="hGb-W6-w7N"/>
+                                    <constraint firstItem="Kly-FC-Xqa" firstAttribute="centerY" secondItem="XX7-W6-i00" secondAttribute="centerY" type="default" id="oAn-V0-fte"/>
+                                    <constraint firstItem="Kly-FC-Xqa" firstAttribute="leading" secondItem="XX7-W6-i00" secondAttribute="leading" constant="29" id="yfb-Pf-8cJ"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="iXg-P4-pwW"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XX7-W6-i00" firstAttribute="centerY" secondItem="5" secondAttribute="centerY" type="default" id="0fR-zp-SNM"/>
+                            <constraint firstItem="XX7-W6-i00" firstAttribute="top" secondItem="5" secondAttribute="top" constant="-20" id="HpF-cM-Xtw"/>
+                            <constraint firstItem="XX7-W6-i00" firstAttribute="centerX" secondItem="5" secondAttribute="centerX" type="default" id="RDO-7L-4gc"/>
+                            <constraint firstItem="XX7-W6-i00" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="-20" id="cyP-Vw-0UG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Kly-FC-Xqa" id="Vqr-zA-u5l"/>
+                        <outlet property="scrollView" destination="XX7-W6-i00" id="6oI-9G-6ZW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="176" y="-26"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="603969_608981115785306_1235947746_n.jpg" width="718" height="720"/>
+    </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="imaginariumViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/imaginariumViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
